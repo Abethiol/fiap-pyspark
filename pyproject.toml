@@ -1,0 +1,9 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fiap-pyspark"
+version = "1.0.0"
+requires-python = ">=3.13"
+dependencies = ["pyspark"]
