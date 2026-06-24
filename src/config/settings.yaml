@@ -1,0 +1,12 @@
+spark:
+  app_name: "FIAP PySpark"
+
+paths:
+  pedidos: "data/pedidos/data/pedidos/pedidos-2025-01.csv.gz"
+  pagamentos: "data/pagamentos/data/pagamentos/pagamentos-2025-01.json.gz"
+  output: "output/relatorio"
+
+file_options:
+  pedidos_csv:
+    header: true
+    sep: ";"

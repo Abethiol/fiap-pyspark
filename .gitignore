@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+
+data/pedidos/
+data/pagamentos/
+
+.venv/
+venv/
+
+output/
