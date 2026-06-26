@@ -2,8 +2,8 @@ spark:
   app_name: "FIAP PySpark"
 
 paths:
-  pedidos: "data/pedidos/data/pedidos/pedidos-2025-01.csv.gz"
-  pagamentos: "data/pagamentos/data/pagamentos/pagamentos-2025-01.json.gz"
+  pedidos: "data/datasets-csv-pedidos/data/pedidos"
+  pagamentos: "data/dataset-json-pagamentos/data/pagamentos"
   output: "output/relatorio"
 
 file_options:
