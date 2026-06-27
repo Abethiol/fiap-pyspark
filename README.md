@@ -141,6 +141,24 @@ Caso essa estrutura seja alterada, os caminhos definidos em `src/config/settings
 
 ---
 
+# Pré-requisitos
+
+- Python 3.13+
+- Java 11 ou superior (necessário para o Spark)
+
+Para instalar o Java no Linux:
+
+```bash
+sudo apt install default-jdk
+```
+
+Para verificar se está instalado:
+
+```bash
+java -version
+```
+---
+
 # Instalação
 
 Clone este repositório:
