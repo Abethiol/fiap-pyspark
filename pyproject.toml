@@ -6,4 +6,4 @@ build-backend = "setuptools.build_meta"
 name = "fiap-pyspark"
 version = "1.0.0"
 requires-python = ">=3.13"
-dependencies = ["pyspark"]
+dependencies = ["pyspark==4.1.2"]
