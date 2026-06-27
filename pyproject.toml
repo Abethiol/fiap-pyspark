@@ -1,9 +1,19 @@
 [build-system]
-requires = ["setuptools"]
+requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "fiap-pyspark"
 version = "1.0.0"
+description = "Projeto Final Data Engineering Programming"
 requires-python = ">=3.13"
-dependencies = ["pyspark==4.1.2"]
+
+dependencies = [
+    "pyspark==4.1.2",
+    "PyYAML==6.0.3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==9.1.1",
+]
