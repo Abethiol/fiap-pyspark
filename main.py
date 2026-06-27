@@ -1,19 +1,31 @@
 from src.config.app_config import AppConfig
 from src.session.spark_session_manager import SparkSessionManager
 from src.io.data_reader import DataReader
+from src.io.data_writer import DataWriter
+from src.business.business_logic import BusinessLogic
+from src.pipeline.pipeline import Pipeline
 
-config = AppConfig()
 
-spark_manager = SparkSessionManager(config)
-spark = spark_manager.get_spark()
+def main():
+    config = AppConfig()
+    spark = SparkSessionManager(config).get_spark()
 
-reader = DataReader(spark, config)
+    try:
+        reader = DataReader(spark, config)
+        writer = DataWriter(config)
+        business_logic = BusinessLogic()
 
-df_pedidos = reader.read_pedidos()
-df_pagamentos = reader.read_pagamentos()
+        pipeline = Pipeline(
+            reader,
+            business_logic,
+            writer
+        )
 
-print("PEDIDOS")
-df_pedidos.show(5)
+        pipeline.run()
 
-print("PAGAMENTOS")
-df_pagamentos.show(5)
+    finally:
+        spark.stop()
+
+
+if __name__ == "__main__":
+    main()
