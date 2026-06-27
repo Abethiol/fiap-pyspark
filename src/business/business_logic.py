@@ -21,7 +21,7 @@ class BusinessLogic:
                 year(
                     to_timestamp(
                         col("DATA_CRIACAO"),
-                        "yyyy-MM-dd'T'HH:mm:ss.SSSSSS"
+                        "yyyy-MM-dd'T'HH:mm:ss"
                     )
                 )== 2025
             )
